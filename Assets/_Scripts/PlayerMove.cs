@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +6,18 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     
-    [SerializeField][Range (0,100)] public float moveSpeed = 5f;
-    float speedX, speedY;
-    Rigidbody2D rb2d;
+    public float moveSpeed = 5f;
+    public Rigidbody2D rb2d;
+    Vector2 movement;
     
-    void Start()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        speedX = Input.GetAxis("Horizontal");
-        speedY = Input.GetAxis("Vertical");
-        rb2d.velocity = new Vector2(speedX, speedY);
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
+    }
+
+    private void FixedUpdate()
+    {
+        rb2d.MovePosition(rb2d.position + moveSpeed * movement * Time.fixedDeltaTime);
     }
 }
