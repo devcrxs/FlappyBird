@@ -6,18 +6,18 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5f;   
     public Rigidbody2D rb2d;
     Vector2 movement;
     
     void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
+        movement.x = Input.GetAxis("Horizontal");   //movimiento x, y del player
         movement.y = Input.GetAxis("Vertical");
     }
 
     private void FixedUpdate()
     {
-        rb2d.MovePosition(rb2d.position + moveSpeed * movement * Time.fixedDeltaTime);
+        rb2d.MovePosition(rb2d.position + moveSpeed * movement * Time.fixedDeltaTime);  //fisicas del movimiento del jugador
     }
 }
