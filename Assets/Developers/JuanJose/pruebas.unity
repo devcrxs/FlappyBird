@@ -2483,7 +2483,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5625, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1.125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -2615,13 +2615,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1a2e7dfbb530b48b534aee665f6d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1617534991}
+  bulletPrefab: {fileID: 0}
   shootDistance: 100
   shootTime: 1
   nextTimeShoot: 1
   bulletSpawn: {fileID: 737957692}
   bulletSpeed: 10
-  rb2d: {fileID: 1617534993}
+  layerTarget:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1896706134
 GameObject:
   m_ObjectHideFlags: 0
