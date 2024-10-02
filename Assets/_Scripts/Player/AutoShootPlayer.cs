@@ -1,12 +1,10 @@
 using UnityEngine;
 public class AutoShootPlayer : MonoBehaviour
 {
-    [SerializeField]private GameObject bulletPrefab;
     [SerializeField]private float shootDistance = 10f;
     [SerializeField]private float shootTime = 1f;
     [SerializeField]private float nextTimeShoot = 1f;
     [SerializeField]private Transform bulletSpawn;
-    [SerializeField]private float bulletSpeed = 10f;
     [SerializeField]private LayerMask layerTarget;
 
     private void Update()
@@ -21,11 +19,11 @@ public class AutoShootPlayer : MonoBehaviour
 
     private void ShootAtEnemy(Vector2 enemyPosition)
     {
-        GameObject bulletInstance = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
-        Rigidbody2D bulletRb2d = bulletInstance.GetComponent<Rigidbody2D>();
-        if (bulletRb2d == null) return;
-        Vector2 direction =(enemyPosition - (Vector2)bulletSpawn.position).normalized;
-        bulletRb2d.velocity = direction * bulletSpeed;
+        var bullet = ObjectPooling.instance.GetPrefabFree();
+        if (bullet == null) return;
+        bullet.transform.position = bulletSpawn.position;
+        bullet.SetActive(true);
+        bullet.GetComponent<Bullet>().MoveBullet(enemyPosition);
     }
     
     private void OnDrawGizmosSelected()

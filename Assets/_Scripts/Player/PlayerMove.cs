@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
         //movement.y = Input.GetAxis("Vertical");
         movement.x = joystick.Horizontal;
         movement.y = joystick.Vertical;
+        FlipPlayer();
         if (movement.magnitude <= 0.1f)
         {
             rb2d.velocity = Vector2.zero;
@@ -21,5 +22,13 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         rb2d.MovePosition(rb2d.position + moveSpeed * movement * Time.fixedDeltaTime);  //fisicas del movimiento del jugador
+    }
+
+    private void FlipPlayer()
+    {
+        if (movement.x == 0) return;
+        var scale = transform.localScale;
+        scale.x = movement.x > 0 ? 1 : -1;
+        transform.localScale = scale;
     }
 }

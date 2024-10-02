@@ -1006,6 +1006,53 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1346372093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346372095}
+  - component: {fileID: 1346372094}
+  m_Layer: 0
+  m_Name: ObjectPooling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1346372094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346372093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaeecb7f82752dd478eebe1c10d77429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCountPrefabs: 30
+  prefabPool: {fileID: 3401079053570762674, guid: 6cfcc884326215744aefa4e44f3f7641, type: 3}
+  pointSpawnPools: {fileID: 1346372095}
+--- !u!4 &1346372095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346372093}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354975074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,6 +3082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2290964275397328766, guid: 10a866864e5d2df48880ea2fcd3981bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2838762528793637872, guid: 10a866864e5d2df48880ea2fcd3981bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3096,10 +3147,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 386946129349864918, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1522577426807497419, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 475340396}
+    - target: {fileID: 8417844449254203054, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8417844449254203054, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3159,3 +3218,4 @@ SceneRoots:
   - {fileID: 1539287443}
   - {fileID: 2101406398}
   - {fileID: 1523718691}
+  - {fileID: 1346372095}
