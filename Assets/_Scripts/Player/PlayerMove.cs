@@ -5,17 +5,40 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private FloatingJoystick joystick;
     private Vector2 movement;
+    private float joystickDeadZone = 0.1f;
+    [SerializeField] private Transform arrow;
+    [SerializeField] private float distanceArrowPlayer;
+    [SerializeField] private Transform player;
+    
     
     private void Update()
     {
-        //movement.x = Input.GetAxis("Horizontal");   //movimiento x, y del player
-        //movement.y = Input.GetAxis("Vertical");
+        
         movement.x = joystick.Horizontal;
         movement.y = joystick.Vertical;
         FlipPlayer();
         if (movement.magnitude <= 0.1f)
         {
             rb2d.velocity = Vector2.zero;
+        }
+        
+        
+        // esta parte del codigo es para que la flecha vaya donde el joystick va
+        
+        
+        if (Mathf.Abs(movement.x) > joystickDeadZone || Mathf.Abs(movement.y) > joystickDeadZone)
+        {
+            
+            Vector3 direction = new Vector3(movement.x, movement.y, 0);
+
+            
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            
+            Vector3 offset = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0) * distanceArrowPlayer;
+            arrow.position = player.position + offset;
+
+           
+            arrow.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
 
