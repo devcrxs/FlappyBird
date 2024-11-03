@@ -1,6 +1,8 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class UIManager : MonoBehaviour
 {
     [Header("Experience HUD")]
@@ -12,6 +14,9 @@ public class UIManager : MonoBehaviour
     private int seconds;
     private float timeSpeed;
     [SerializeField] private TextMeshProUGUI timerText;
+    
+    [Header("Rhythm")]
+    [SerializeField] private Slider sliderRhythm;
 
     public static UIManager instance;
 
@@ -53,5 +58,12 @@ public class UIManager : MonoBehaviour
         }
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    
+
+    public void UpdateRhythm(float timeShoot)
+    {
+        sliderRhythm.value = 0;
+        sliderRhythm.DOValue(1, timeShoot);
     }
 }

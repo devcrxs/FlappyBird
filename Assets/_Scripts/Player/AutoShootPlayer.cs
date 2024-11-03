@@ -15,6 +15,8 @@ public class AutoShootPlayer : MonoBehaviour
         if (!(Time.time > nextTimeShoot)) return;
         ShootAtEnemy(enemiesInRange[0].transform.position);
         nextTimeShoot = Time.time + 1f / shootTime;
+        
+        UIManager.instance.UpdateRhythm(shootTime);
     }
 
     private void ShootAtEnemy(Vector2 enemyPosition)
