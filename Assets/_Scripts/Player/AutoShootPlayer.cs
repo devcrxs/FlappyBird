@@ -19,7 +19,7 @@ public class AutoShootPlayer : MonoBehaviour
 
     private void ShootAtEnemy(Vector2 enemyPosition)
     {
-        var bullet = ObjectPooling.instance.GetPrefabFree();
+        var bullet = ObjectPoolingManager.instance.GetBulletFree();
         if (bullet == null) return;
         bullet.transform.position = bulletSpawn.position;
         bullet.SetActive(true);

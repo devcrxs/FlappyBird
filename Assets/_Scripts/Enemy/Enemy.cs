@@ -1,24 +1,16 @@
 using UnityEngine;
-using UnityEngine.AI;
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] private Transform target;
-    private NavMeshAgent agent;
+    [SerializeField] protected int health;
+    [SerializeField] protected int damage;
 
-    private void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-    }
+    protected abstract void UpdateHealth();
+    protected abstract void Dead();
+    protected abstract void LaunchDamage();
 
-    private void Update()
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        Move();
-    }
-
-    private void Move()
-    {
-        agent.SetDestination(target.position);
+        if (!other.CompareTag("Bullet")) return;
+        UpdateHealth();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public class Bullet : MonoBehaviour
 {
@@ -16,8 +17,14 @@ public class Bullet : MonoBehaviour
 
     private void HideBullet()
     {
-        ObjectPooling.instance.AddPrefabToAvaible(gameObject);
+        ObjectPoolingManager.instance.AddBulletsToAvaible(gameObject);
         rb2D.velocity = Vector2.zero;
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag("Enemy")) return;
+        HideBullet();
     }
 }
