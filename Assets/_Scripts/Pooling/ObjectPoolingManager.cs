@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 public class ObjectPoolingManager : MonoBehaviour
 {
@@ -61,10 +62,21 @@ public class ObjectPoolingManager : MonoBehaviour
     }
     public void AddEnemyToAvaible(GameObject prefab)
     {
-        if (prefabsEnemyUsed.Contains(prefab))
+        if(prefabsEnemyUsed.Find(prefab2 => prefab2.GetInstanceID() == prefab.GetInstanceID()))
         {
-            prefabsEnemyUsed.RemoveAt(0);
+            prefabsEnemyUsed.Remove(prefab);
+            prefab.SetActive(false);
             prefabsEnemyFree.Add(prefab);
         }
+        
+    }
+
+    public int GetCountEnemiesFree()
+    {
+        return prefabsEnemyFree.Count;
+    }
+    public int GetCountEnemiesUsed()
+    {
+        return prefabsEnemyUsed.Count;
     }
 }

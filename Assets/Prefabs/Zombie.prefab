@@ -45,19 +45,19 @@ NavMeshAgent:
   m_GameObject: {fileID: 2290964275397328766}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Radius: 0.44
+  m_Speed: 3
+  m_Acceleration: 50
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_AngularSpeed: 50
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.93
-  m_BaseOffset: 0.44
+  m_Height: 1
+  m_BaseOffset: 0.53
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 2
 --- !u!58 &9193299549325031524
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -67,7 +67,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 2290964275397328766}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4d6f5efb7fb19bd46a2b8c3197dc7a8a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -105,7 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725815fcbabbe254e868cf0829c6a473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &-121711457527707430
 MonoBehaviour:
   m_ObjectHideFlags: 0

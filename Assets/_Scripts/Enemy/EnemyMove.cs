@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    private Transform target;
     private NavMeshAgent agent;
 
     private void Start()
@@ -13,13 +13,15 @@ public class EnemyMove : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         Move();
     }
 
     private void Move()
     {
-        agent.SetDestination(target.position);
+        Vector3 targetPosition = target.position;
+        targetPosition.z = transform.position.z;
+        agent.SetDestination(targetPosition);
     }
 }

@@ -10,7 +10,7 @@ public class Zombie : Enemy
     protected override void Dead()
     {
         ObjectPoolingManager.instance.AddEnemyToAvaible(gameObject);
-        gameObject.SetActive(false);
+        SpawnerManager.instance.CanSpawn();
     }
 
     protected override void LaunchDamage()
