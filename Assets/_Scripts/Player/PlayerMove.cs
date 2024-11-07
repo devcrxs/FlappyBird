@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
@@ -9,7 +10,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Transform pivotArrow;
     [SerializeField] private float distanceArrowPlayer;
 
-    
+    [Header("Animation")]
+    private Animator animator;
+
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -21,8 +29,9 @@ public class PlayerMove : MonoBehaviour
         {
             rb2d.velocity = Vector2.zero;
         }
-        // esta parte del codigo es para que la flecha vaya donde el joystick va
+        
         ArrowMove();
+        animator.SetFloat("velocity", movement.magnitude);
     }
 
     private void ArrowMove()
