@@ -18,10 +18,23 @@ public class EnemyMove : MonoBehaviour
         Move();
     }
 
+    private void Update()
+    {
+        FlipEnemy();
+    }
+
     private void Move()
     {
         Vector3 targetPosition = target.position;
         targetPosition.z = transform.position.z;
         agent.SetDestination(targetPosition);
+    }
+
+    private void FlipEnemy()
+    {
+        var direction = target.position - transform.position;
+        var scale = transform.localScale;
+        scale.x = direction.x > 0 ? 1 : -1;
+        transform.localScale = scale;
     }
 }
