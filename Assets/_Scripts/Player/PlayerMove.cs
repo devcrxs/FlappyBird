@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
@@ -11,13 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float distanceArrowPlayer;
 
     [Header("Animation")]
-    private Animator animator;
-
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+    [SerializeField] private Animator animator;
 
     private void Update()
     {
@@ -31,7 +24,7 @@ public class PlayerMove : MonoBehaviour
         }
         
         ArrowMove();
-        animator.SetFloat("velocity", movement.magnitude);
+        animator.SetFloat("Velocity", movement.magnitude);
     }
 
     private void ArrowMove()
