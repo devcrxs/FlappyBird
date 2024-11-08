@@ -3,36 +3,42 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;   
     [SerializeField] private Rigidbody2D rb2d;
-    [SerializeField] private FloatingJoystick joystick;
-    private Vector2 movement;
-    private float joystickDeadZone = 0.1f;
+    private FloatingJoystick _joystick;
+    private Vector2 _movement;
+    private const float JoystickDeadZone = 0.1f;
     [SerializeField] private Transform pivotArrow;
     [SerializeField] private float distanceArrowPlayer;
 
     [Header("Animation")]
     [SerializeField] private Animator animator;
+    
+    public Vector2 Movement => _movement;
+
+    private void Start()
+    {
+        _joystick = FindObjectOfType<FloatingJoystick>();
+    }
 
     private void Update()
     {
-        
-        movement.x = joystick.Horizontal;
-        movement.y = joystick.Vertical;
-        FlipPlayer();
-        if (movement.magnitude <= 0.1f)
-        {
-            rb2d.velocity = Vector2.zero;
-        }
-        
+        SetMovementInput();
         ArrowMove();
-        animator.SetFloat("Velocity", movement.magnitude);
+        rb2d.velocity = _movement.magnitude <= 0.1f ? Vector2.zero: rb2d.velocity;
+        animator.SetFloat("Velocity", _movement.magnitude);
+    }
+
+    private void SetMovementInput()
+    {
+        _movement.x = _joystick.Horizontal;
+        _movement.y = _joystick.Vertical;
     }
 
     private void ArrowMove()
     {
-        if (Mathf.Abs(movement.x) > joystickDeadZone || Mathf.Abs(movement.y) > joystickDeadZone)
+        if (Mathf.Abs(_movement.x) > JoystickDeadZone || Mathf.Abs(_movement.y) > JoystickDeadZone)
         {
 
-            Vector3 direction = new Vector3(movement.x, movement.y, 0);
+            Vector3 direction = new Vector3(_movement.x, _movement.y, 0);
 
             
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -47,15 +53,6 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb2d.MovePosition(rb2d.position + moveSpeed * movement * Time.fixedDeltaTime);  //fisicas del movimiento del jugador
-    }
-
-    private void FlipPlayer()
-    {
-        if (movement.x == 0) return;
-        var scale = transform.localScale;
-        scale.x = movement.x > 0 ? 1 : -1;
-        transform.localScale = scale;
-        pivotArrow.localScale = scale;
+        rb2d.MovePosition(rb2d.position + moveSpeed * _movement * Time.fixedDeltaTime);  //fisicas del movimiento del jugador
     }
 }

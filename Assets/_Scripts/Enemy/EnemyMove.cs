@@ -15,19 +15,19 @@ public class EnemyMove : MonoBehaviour
 
     private void LateUpdate()
     {
-        Move();
+       
     }
 
     private void Update()
     {
+        Move();
         FlipEnemy();
     }
 
     private void Move()
     {
-        Vector3 targetPosition = target.position;
-        targetPosition.z = transform.position.z;
-        agent.SetDestination(targetPosition);
+        transform.position = Vector3.MoveTowards(transform.position,target.position, agent.speed * Time.deltaTime);
+        //agent.SetDestination(targetPosition);
     }
 
     private void FlipEnemy()

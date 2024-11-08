@@ -704,7 +704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &700668349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,10 +2392,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 806931149366343218, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1522577426807497419, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1596894713}
+    - target: {fileID: 4643627737889494983, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6363309688956487948, guid: 6ddc853a61441364eb1db820062fdf07, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
