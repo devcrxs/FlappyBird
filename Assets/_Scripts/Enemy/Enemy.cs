@@ -3,6 +3,8 @@ public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected int health;
     [SerializeField] protected int damage;
+    
+    [SerializeField] private int pointsForKilling = 1;
 
     protected abstract void UpdateHealth();
     protected abstract void Dead();
@@ -12,5 +14,11 @@ public abstract class Enemy : MonoBehaviour
     {
         if (!other.CompareTag("Bullet")) return;
         UpdateHealth();
+    }
+
+    protected void AddPointsForKilling()
+    {
+        GameManager.instance.AddScoreDeath(pointsForKilling);
+        UIManager.instance.UpdateEnemyDeath();
     }
 }

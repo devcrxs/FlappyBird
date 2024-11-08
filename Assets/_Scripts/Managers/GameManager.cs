@@ -5,9 +5,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float actualExperience;
     [SerializeField] private int actualLevel;
     public static GameManager instance;
+    
+    [Header("DeathScore")]
+    [SerializeField] private int deathScore;
 
     public int ActualLevel => actualLevel;
     public float ActualExperience => actualExperience;
+    public int DeathScore => deathScore;
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -19,5 +23,11 @@ public class GameManager : MonoBehaviour
         if (!(actualExperience >= maxExperience)) return;
         actualExperience = 0;
         actualLevel++;
+    }
+
+    public void AddScoreDeath(int score)
+    {
+        deathScore += score;
+        
     }
 }

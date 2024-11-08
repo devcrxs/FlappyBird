@@ -17,6 +17,10 @@ public class UIManager : MonoBehaviour
     
     [Header("Rhythm")]
     [SerializeField] private Slider sliderRhythm;
+    
+    [Header("DeathScore")]
+    [SerializeField] private TextMeshProUGUI textDeathScore;
+    
 
     public static UIManager instance;
 
@@ -65,5 +69,10 @@ public class UIManager : MonoBehaviour
     {
         sliderRhythm.value = 0;
         sliderRhythm.DOValue(1, timeShoot);
+    }
+
+    public void UpdateEnemyDeath()
+    {
+       textDeathScore.text = GameManager.instance.DeathScore.ToString();
     }
 }
