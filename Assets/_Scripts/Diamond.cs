@@ -6,11 +6,11 @@ public class Diamond : MonoBehaviour
 {
     [Header("ExperienceDiamond")]
     [SerializeField] private float expEarn = 25f;
-    [Header("")]
+    [Header("Animation")]
     private Transform _player;
     [SerializeField] private float moveAwayDistance = 2f;
-    [SerializeField] private float followSpeed = 3f; // Velocidad de persecución
-    [SerializeField] private float followDuration; // Duración de la persecución
+    [SerializeField] private float followSpeed = 3f; 
+    [SerializeField] private float followDuration; 
     private CircleCollider2D _circleCollider;
 
     private void Start()
