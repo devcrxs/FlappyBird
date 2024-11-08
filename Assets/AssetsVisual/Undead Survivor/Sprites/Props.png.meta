@@ -136,133 +136,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weapon 0
+      name: Props_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
+        y: 44
         width: 18
-        height: 9
-      alignment: 9
-      pivot: {x: 0.3, y: 0.6}
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe848cb6984cf0548a022c05227812e9
-      internalID: 143021600
+      spriteID: aead9b5df49d0ed41be1c8ab5cc6b0e1
+      internalID: -1135264931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon 1
+      name: Props_1
       rect:
         serializedVersion: 2
         x: 19
-        y: 42
+        y: 44
         width: 18
-        height: 9
-      alignment: 9
-      pivot: {x: 0.3, y: 0.6}
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03aa7ec46ababa94ea4b79b5dbe919bf
-      internalID: -1972582131
+      spriteID: 80dd500be5426d74fb3c6ebda4383006
+      internalID: 195341255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon 2
+      name: Props_2
       rect:
         serializedVersion: 2
         x: 38
         y: 42
         width: 18
-        height: 9
-      alignment: 9
-      pivot: {x: 0.3, y: 0.6}
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c1356655813fe24d9a8738c61aafcbf
-      internalID: 1349035616
+      spriteID: 551e077a1eca4924b9dda9027a815df3
+      internalID: -1595964472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon 3
+      name: Props_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 34
         width: 18
-        height: 9
-      alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5c66514b4fe03344901566a85dac876
-      internalID: -353751291
+      spriteID: ee7e4d10211cabe4980ae400ae67cd91
+      internalID: 1021640435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon 4
+      name: Props_4
       rect:
         serializedVersion: 2
         x: 19
         y: 32
         width: 18
         height: 9
-      alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a369fad18131b46b18f789f5ed532a
-      internalID: -144335857
+      spriteID: 91eaf30df6c8157468654cc5a4f9f486
+      internalID: -1716536418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon 5
+      name: Props_5
       rect:
         serializedVersion: 2
         x: 38
-        y: 32
+        y: 34
         width: 18
-        height: 9
-      alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d13921cb5b88da4a93c26ca793efdf2
-      internalID: 1772703093
+      spriteID: 6ed583370dd809d458b180df9c36cd41
+      internalID: 743320526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet 0
+      name: Props_6
       rect:
         serializedVersion: 2
         x: 0
@@ -270,20 +270,20 @@ TextureImporter:
         width: 7
         height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5aa825181fcee7a419436726060b971a
-      internalID: 1737672109
+      spriteID: d948b880580750841b75aa70cf5fcd31
+      internalID: -184821211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet 1
+      name: Props_7
       rect:
         serializedVersion: 2
         x: 8
@@ -291,20 +291,20 @@ TextureImporter:
         width: 7
         height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bca8a8641c6e3354ab75d0274abbc1e1
-      internalID: -703694536
+      spriteID: 25f502b12832a5344b73b77db8b0d83d
+      internalID: -1017065337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet 2
+      name: Props_8
       rect:
         serializedVersion: 2
         x: 16
@@ -312,20 +312,20 @@ TextureImporter:
         width: 9
         height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6aabc5203cefc24db52ecf0ea98f5c4
-      internalID: 762804792
+      spriteID: 83563023a759bf142bb1284eeae694d7
+      internalID: 1081247302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet 3
+      name: Props_9
       rect:
         serializedVersion: 2
         x: 26
@@ -333,20 +333,20 @@ TextureImporter:
         width: 4
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6befcdde3e485df47821ae82f1c4a2b2
-      internalID: -537537479
+      spriteID: fa6d096008a006a428268cbdffce8ab1
+      internalID: -1167515714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet 4
+      name: Props_10
       rect:
         serializedVersion: 2
         x: 31
@@ -354,20 +354,20 @@ TextureImporter:
         width: 5
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c2486907b334634e81ca354c6e9bb14
-      internalID: -1327499133
+      spriteID: baea99a636cbe8a4ebe98d695e0d3a3a
+      internalID: 708395295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow
+      name: Props_11
       rect:
         serializedVersion: 2
         x: 37
@@ -375,20 +375,20 @@ TextureImporter:
         width: 10
         height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97c7a789f60c2734eaa0870903d4a8b4
-      internalID: 1304559308
+      spriteID: 3ee3427d835ba524790d78895a74425a
+      internalID: -1395525519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet 5
+      name: Props_12
       rect:
         serializedVersion: 2
         x: 26
@@ -396,20 +396,20 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b3786c7d6806b4e95c8bfa9106f125
-      internalID: 154122315
+      spriteID: a5d3717f01828894581e53ad06ead0d3
+      internalID: -2004268429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Box
+      name: Props_13
       rect:
         serializedVersion: 2
         x: 37
@@ -417,20 +417,20 @@ TextureImporter:
         width: 15
         height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e1b228964841144bcdc169a70818dd
-      internalID: -38345435
+      spriteID: 486782c85e380694a980bf0db18fbf8f
+      internalID: 1319666880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Exp 0
+      name: Props_14
       rect:
         serializedVersion: 2
         x: 0
@@ -438,20 +438,20 @@ TextureImporter:
         width: 10
         height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74fc20a4abc4ea54b8692b4c6987d1c0
-      internalID: 362616440
+      spriteID: ac61e37393aa6334f8ce7e8c1e82a436
+      internalID: 481206673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Exp 1
+      name: Props_15
       rect:
         serializedVersion: 2
         x: 11
@@ -459,20 +459,20 @@ TextureImporter:
         width: 10
         height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dca584bf28cc4394ab1b4968285fbd18
-      internalID: 1807624531
+      spriteID: d885cc67ad158e94c850c9b13fde03e3
+      internalID: -89582996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Exp 2
+      name: Props_16
       rect:
         serializedVersion: 2
         x: 22
@@ -480,20 +480,20 @@ TextureImporter:
         width: 10
         height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c499da979228cb7479ca05e08eef5ee4
-      internalID: -1997803578
+      spriteID: 5cc754c67300240469c34c5c29594699
+      internalID: 896832026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mag
+      name: Props_17
       rect:
         serializedVersion: 2
         x: 33
@@ -501,20 +501,20 @@ TextureImporter:
         width: 12
         height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d814282c489a3c140b0a29e1308a03cb
-      internalID: 1997828774
+      spriteID: 0894430964a7cee4aa9b745807225f0d
+      internalID: -143851228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Health
+      name: Props_18
       rect:
         serializedVersion: 2
         x: 46
@@ -522,14 +522,14 @@ TextureImporter:
         width: 10
         height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e058c59a9d96270428e48c18f4b31870
-      internalID: 934571490
+      spriteID: fed8c122a90ed004fa001a998cabaaf1
+      internalID: 1003282058
       vertices: []
       indices: 
       edges: []
@@ -545,25 +545,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Box: -38345435
-      Bullet 0: 1737672109
-      Bullet 1: -703694536
-      Bullet 2: 762804792
-      Bullet 3: -537537479
-      Bullet 4: -1327499133
-      Bullet 5: 154122315
-      Exp 0: 362616440
-      Exp 1: 1807624531
-      Exp 2: -1997803578
-      Health: 934571490
-      Mag: 1997828774
-      Shadow: 1304559308
-      Weapon 0: 143021600
-      Weapon 1: -1972582131
-      Weapon 2: 1349035616
-      Weapon 3: -353751291
-      Weapon 4: -144335857
-      Weapon 5: 1772703093
+      Props_0: -1135264931
+      Props_1: 195341255
+      Props_10: 708395295
+      Props_11: -1395525519
+      Props_12: -2004268429
+      Props_13: 1319666880
+      Props_14: 481206673
+      Props_15: -89582996
+      Props_16: 896832026
+      Props_17: -143851228
+      Props_18: 1003282058
+      Props_2: -1595964472
+      Props_3: 1021640435
+      Props_4: -1716536418
+      Props_5: 743320526
+      Props_6: -184821211
+      Props_7: -1017065337
+      Props_8: 1081247302
+      Props_9: -1167515714
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
