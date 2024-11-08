@@ -3,8 +3,8 @@ public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected int health;
     [SerializeField] protected int damage;
-    
-    [SerializeField] private int pointsForKilling = 1;
+    [SerializeField] private GameObject diamondPrefab;
+    private float _dropDiamondChance;
 
     protected abstract void UpdateHealth();
     protected abstract void Dead();
@@ -18,7 +18,16 @@ public abstract class Enemy : MonoBehaviour
 
     protected void AddPointsForKilling()
     {
-        GameManager.instance.AddScoreDeath(pointsForKilling);
+        GameManager.instance.AddScoreDeath();
         UIManager.instance.UpdateEnemyDeath();
+    }
+    protected void SpawnDiamond()
+    {
+        float randomChance = Random.Range(0f, 100f);
+        _dropDiamondChance  = Random.Range(0f, 60f);
+        if (randomChance <= _dropDiamondChance)
+        {
+            Instantiate(diamondPrefab, transform.position, Quaternion.identity);
+        }
     }
 }

@@ -119,8 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   damage: 1
-  pointsForKilling: 1
-  diamond: {fileID: 6697624246761496876, guid: bd2d55196a7bb40158c3f34900136f36, type: 3}
+  diamondPrefab: {fileID: 6697624246761496876, guid: bd2d55196a7bb40158c3f34900136f36, type: 3}
 --- !u!1 &7826868281320860194
 GameObject:
   m_ObjectHideFlags: 0

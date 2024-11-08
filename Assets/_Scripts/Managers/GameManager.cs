@@ -25,9 +25,8 @@ public class GameManager : MonoBehaviour
         actualLevel++;
     }
 
-    public void AddScoreDeath(int score)
+    public void AddScoreDeath()
     {
-        deathScore += score;
-        
+        deathScore++;
     }
 }

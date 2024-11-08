@@ -1247,7 +1247,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1422,6 +1422,7 @@ MonoBehaviour:
   textExperience: {fileID: 534022322}
   timerText: {fileID: 120536984}
   sliderRhythm: {fileID: 411645736}
+  textDeathScore: {fileID: 1459740246}
 --- !u!1001 &1312132664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1551,6 +1552,17 @@ MonoBehaviour:
   prefabBullet: {fileID: 3401079053570762674, guid: 6cfcc884326215744aefa4e44f3f7641, type: 3}
   prefabEnemy: {fileID: 2290964275397328766, guid: 10a866864e5d2df48880ea2fcd3981bc, type: 3}
   pointSpawnPools: {fileID: 1346372095}
+--- !u!114 &1459740246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4186157264722272858, guid: 065647bebf5fde54ca34d681606af689, type: 3}
+  m_PrefabInstance: {fileID: 534022321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539287440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,6 +2222,7 @@ MonoBehaviour:
   maxExperience: 100
   actualExperience: 0
   actualLevel: 0
+  deathScore: 0
 --- !u!1001 &2057913168
 PrefabInstance:
   m_ObjectHideFlags: 0
