@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed = 10f;
     [SerializeField] private Rigidbody2D rb2D;
+    [SerializeField] private Animator bulletAnimator;
 
     public void MoveBullet(Vector2 target)
     {
@@ -12,6 +13,7 @@ public class Bullet : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         Vector2 direction =(target - (Vector2)transform.position).normalized;
         rb2D.velocity = direction * bulletSpeed;
+        bulletAnimator.Play("Bullet");
         Invoke(nameof(HideBullet), 0.5f);
     }
 
