@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 public class ObjectPoolingManager : MonoBehaviour
 {
     [SerializeField] private int maxCountPrefabs;
+    [SerializeField] private int maxCountSkeletons;
     [SerializeField] private GameObject prefabBullet;
     [SerializeField] private GameObject prefabEnemy;
+    [SerializeField] private GameObject prefabSkeleton;
     [SerializeField] private Transform pointSpawnPools;
     private List<GameObject> prefabsBulletsFree = new ();
     private List<GameObject> prefabsBulletsUsed = new ();
@@ -23,6 +24,7 @@ public class ObjectPoolingManager : MonoBehaviour
     {
         CreatePrefabs(maxCountPrefabs,prefabBullet,pointSpawnPools.position,Quaternion.identity,prefabsBulletsFree);
         CreatePrefabs(maxCountPrefabs,prefabEnemy,Vector3.zero, Quaternion.identity, prefabsEnemyFree);
+        CreatePrefabs(maxCountSkeletons,prefabSkeleton,Vector3.zero, Quaternion.identity, prefabsEnemyFree);
     }
     public void CreatePrefabs(int maxPrefabs, GameObject prefabGo, Vector3 positionInstantiate, Quaternion rotationInstantiate, List<GameObject>listSavePrefabs)
     {
@@ -46,9 +48,10 @@ public class ObjectPoolingManager : MonoBehaviour
     public GameObject GetEnemyFree()
     {
         if (prefabsEnemyFree.Count <= 0) return null;
-        var prefab = prefabsEnemyFree[0];
+        var enemyRandom = Random.Range(0, prefabsEnemyFree.Count);
+        var prefab = prefabsEnemyFree[enemyRandom];
         prefabsEnemyUsed.Add(prefab);
-        prefabsEnemyFree.RemoveAt(0);
+        prefabsEnemyFree.RemoveAt(enemyRandom);
         return prefab;
     }
     
@@ -66,6 +69,7 @@ public class ObjectPoolingManager : MonoBehaviour
         {
             prefabsEnemyUsed.Remove(prefab);
             prefab.SetActive(false);
+            prefab.GetComponent<EnemyMove>().IsDead = false;
             prefabsEnemyFree.Add(prefab);
         }
         

@@ -37,9 +37,10 @@ public class SpawnerManager : MonoBehaviour
         var pointInRange = Vector2.zero;
         for (int i = 0; i < pointsInstance.Count; i++)
         {
-            if (Vector2.Distance(_player.position, pointsInstance[i].position) < 0.1f)
+            if (Vector2.Distance(_player.position, pointsInstance[i].position) < 5f)
             {
                 pointInRange = pointsInstance[i].position;
+                break;
             }
         }
         pointInRange.x += Random.Range(-5f, 6f);

@@ -1,4 +1,4 @@
-public class Zombie : Enemy
+public class Skeleton : Enemy
 {
     private EnemyMove _enemyMove;
 
@@ -34,5 +34,4 @@ public class Zombie : Enemy
     {
         //throw new System.NotImplementedException();
     }
- 
 }

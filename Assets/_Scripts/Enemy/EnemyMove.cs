@@ -2,8 +2,14 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyMove : MonoBehaviour
 {
+    private bool isDead;
     private Transform target;
     private NavMeshAgent agent;
+
+    public bool IsDead
+    {
+        set => isDead = value; 
+    }
 
     private void Start()
     {
@@ -13,13 +19,9 @@ public class EnemyMove : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
-    private void LateUpdate()
-    {
-       
-    }
-
     private void Update()
     {
+        if (isDead) return;
         Move();
         FlipEnemy();
     }

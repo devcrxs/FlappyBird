@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 355968902999744265}
   - component: {fileID: 9193299549325031524}
   - component: {fileID: 3650404293824522349}
-  - component: {fileID: -121711457527707430}
+  - component: {fileID: 7073190995329682708}
   m_Layer: 6
-  m_Name: Zombie
+  m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725815fcbabbe254e868cf0829c6a473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-121711457527707430
+--- !u!114 &7073190995329682708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2290964275397328766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 350768c23d7b04654bec9651631d841f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f04cefd84ceccb4d937df5840ac2860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  damage: 1
+  health: 3
+  damage: 2
   diamondPrefab: {fileID: 6697624246761496876, guid: bd2d55196a7bb40158c3f34900136f36, type: 3}
   animator: {fileID: 1415030960270973268}
 --- !u!1 &7826868281320860194
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1524729577, guid: 3bcb7877229a5334da528f2f0872b5c3, type: 3}
+  m_Sprite: {fileID: 1782705385, guid: d33598d781682e049a53a0a13104ef29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -216,7 +216,7 @@ Animator:
   m_GameObject: {fileID: 7826868281320860194}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 050556270436d4f4288557291a1a99c0, type: 2}
+  m_Controller: {fileID: 22100000, guid: 8d1d920724ffb8a409ce0e458dc4b7a9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

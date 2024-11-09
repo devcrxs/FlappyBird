@@ -4,6 +4,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected int health;
     [SerializeField] protected int damage;
     [SerializeField] private GameObject diamondPrefab;
+    [SerializeField] protected Animator animator;
     private float _dropDiamondChance;
 
     protected abstract void UpdateHealth();
