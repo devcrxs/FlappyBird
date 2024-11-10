@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int ActualLevel => actualLevel;
     public float ActualExperience => actualExperience;
     public int DeathScore => deathScore;
+    
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
         if (!(actualExperience >= maxExperience)) return;
         actualExperience = 0;
         actualLevel++;
+        UIManager.instance.StartLevelUpMenu();
+        
     }
 
     public void AddScoreDeath()

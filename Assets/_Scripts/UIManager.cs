@@ -21,6 +21,9 @@ public class UIManager : MonoBehaviour
     [Header("DeathScore")]
     [SerializeField] private TextMeshProUGUI textDeathScore;
     
+    [Header("LevelUpMenu")]
+    [SerializeField] private GameObject levelUpMenu;
+    
 
     public static UIManager instance;
 
@@ -74,5 +77,17 @@ public class UIManager : MonoBehaviour
     public void UpdateEnemyDeath()
     {
        textDeathScore.text = GameManager.instance.DeathScore.ToString();
+    }
+    public void StartLevelUpMenu()
+    {
+        Time.timeScale = 0f;
+        levelUpMenu.SetActive(true);
+    }
+
+    public void EndLevelUpMenu()
+    {
+        Time.timeScale = 1f;
+        levelUpMenu.SetActive(false);
+        
     }
 }
