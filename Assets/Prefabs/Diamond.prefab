@@ -134,6 +134,8 @@ MonoBehaviour:
   moveAwayDistance: 2
   followSpeed: 10
   followDuration: 0.2
+  diamondDuration: 0.5
+  diamondDistance: 0.3
 --- !u!58 &3941191811283808778
 CircleCollider2D:
   m_ObjectHideFlags: 0

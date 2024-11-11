@@ -1,29 +1,41 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Diamond : MonoBehaviour
 {
     [Header("ExperienceDiamond")]
     [SerializeField] private float expEarn = 25f;
-    [Header("Animation")]
+    
+    [Header("AnimationInPlayer")]
     private Transform _player;
     [SerializeField] private float moveAwayDistance = 2f;
     [SerializeField] private float followSpeed = 3f; 
     [SerializeField] private float followDuration; 
     private CircleCollider2D _circleCollider;
+    
+    [Header("AnimationIdle")] 
+    [SerializeField] private float diamondDuration;
+    [SerializeField] private float diamondDistance;
+    
 
     private void Start()
     {
         _circleCollider = GetComponent<CircleCollider2D>();
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        DiamondIdle();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
         _circleCollider.enabled = false;
+        transform.DOKill();
         DiamondAnimation();
+        
+        
     }
 
     private void DiamondAnimation()
@@ -46,5 +58,28 @@ public class Diamond : MonoBehaviour
         GameManager.instance.AddExperience(expEarn);
         UIManager.instance.UpdateExperience();
         Destroy(gameObject);
+    }
+
+    private void DiamondIdle()
+    {
+        if (_circleCollider.enabled)
+        {
+            float newPositionY = transform.position.y;
+            float offSetY = Random.Range(-diamondDistance, diamondDistance);
+            newPositionY += offSetY;
+
+            transform.DOMoveY(newPositionY, diamondDuration).OnComplete(() =>
+            {
+                transform.DOMoveY(transform.position.y - offSetY, diamondDuration).OnComplete(() =>
+                {
+                    DiamondIdle();
+                }); 
+            });  
+        }
+        else
+        {
+            transform.DOKill();
+        }
+        
     }
 }
